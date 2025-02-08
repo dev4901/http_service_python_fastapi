@@ -1,5 +1,5 @@
 ### **📜 README.md**
-```md
+
 # FastAPI Service with Terraform Deployment
 
 This repository contains a **FastAPI service** that can be deployed on **AWS EC2 using Terraform**.  
@@ -9,7 +9,7 @@ This repository contains a **FastAPI service** that can be deployed on **AWS EC2
 - 🌍 Exposes an endpoint to interact with AWS S3  
 - ☁️ Infrastructure as Code (IaC) using Terraform  
 - 🔗 Automatically pulls Python code from GitHub on EC2  
-```
+
 ---
 
 ## 🛠️ Setup FastAPI Locally
