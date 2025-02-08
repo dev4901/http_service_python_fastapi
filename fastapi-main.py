@@ -3,15 +3,15 @@ import boto3
 import boto3.session
 import json
 
-access_key = 
-secret = 
+# access_key = 
+# secret = 
 region = "us-east-2"
 bucket_name = "devansh-test1-bucket"
 
 # client = boto3.client('s3')
 session = boto3.session.Session(
-    aws_access_key_id = access_key,
-    aws_secret_access_key = secret,
+    # aws_access_key_id = access_key,
+    # aws_secret_access_key = secret,
     region_name = region
 )
 
@@ -22,7 +22,8 @@ app = FastAPI()
 @app.get("/list-bucket-content/{path:path}")
 async def get_directory_details(path: str = ""):
     try:
-        if path[-1] != "/": path= f"{path}/" 
+        if path:
+            if path[-1] != "/": path= f"{path}/" 
         response = s3_client.list_objects_v2(Bucket=bucket_name, Delimiter='/', Prefix=path)
         if "Contents" not in response: raise Exception("Please enter a valid path")
         if 'CommonPrefixes' in response: 

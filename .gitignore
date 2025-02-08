@@ -1,2 +1,3 @@
 fastapi-test*
 terraform-infra*
+fastapi-keyfile.py
