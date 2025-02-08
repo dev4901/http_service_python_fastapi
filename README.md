@@ -16,8 +16,8 @@ This repository contains a **FastAPI service** that can be deployed on **AWS EC2
 
 ### 1️⃣ **Clone the repository**
 ```sh
-git clone https://github.com/dev4901/http_service_python_fastapi.git fastapi-app
-cd fastapi-app
+git clone https://github.com/dev4901/http_service_python_fastapi.git http_service
+cd http_service/fastapi-app
 ```
 
 ### 2️⃣ **Create a virtual environment (optional but recommended)**
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ### 5️⃣ **Run the FastAPI server**
 ```sh
-uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn fastapi-main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ### 6️⃣ **Access API**
@@ -65,9 +65,10 @@ http://127.0.0.1:8000/list-bucket-content/<folder-name> - will list the objects 
 terraform init
 ```
 
-### 3️⃣ **Apply Terraform Configuration**
+### 3️⃣ **Verify and Apply Terraform Configuration**
 ```sh
-terraform apply -auto-approve
+terraform plan
+terraform apply
 ```
 
 Terraform will: <br>
@@ -111,9 +112,9 @@ curl http://127.0.0.1:8000/list-bucket-content/my-folder/
 ## 📜 File Structure
 
 ```
-/http_service_python_fastapi
+/http_service
 │── /fastapi-app  # Python FastAPI code
-│   ├── main.py  # FastAPI application
+│   ├── fastapi-main.py  # FastAPI application
 │   ├── requirements.txt  # Dependencies
 │── /terraform  # Terraform infrastructure code
 │   ├── main.tf  # AWS resources
