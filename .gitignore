@@ -1,3 +1,4 @@
 fastapi-test*
-terraform-infra*
+terraform-infra/.terraform*
+terraform-infra/terraform.tfstate*
 fastapi-keyfile.py
